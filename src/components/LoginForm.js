@@ -12,9 +12,9 @@ class LoginForm extends React.Component {
   }
 
   handleInputChange = (e) => {
-    this.setState(
+    this.setState({
       [e.target.name]: e.target.value
-    )
+    })
   }
 
   handleSubmit = (e) => {
@@ -24,7 +24,7 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <form>
+      <form onSubmit={e => this.handleSubmit(e)}>
         <div>
           <label>
             Username
@@ -38,7 +38,7 @@ class LoginForm extends React.Component {
           </label>
         </div>
         <div>
-          <button type="submit" onSubmit={e => this.handleSubmit(e)}>Log in</button>
+          <button type="submit">Log in</button>
         </div>
       </form>
     );
