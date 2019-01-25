@@ -15,8 +15,13 @@ class LoginForm extends React.Component {
     this.setState(
       [e.target.name]: e.target.value
     )
-
   }
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    e.onSubmit()
+  }
+  
   render() {
     return (
       <form>
@@ -33,7 +38,7 @@ class LoginForm extends React.Component {
           </label>
         </div>
         <div>
-          <button type="submit" onSubmit={this.onSubmit}>Log in</button>
+          <button type="submit" onSubmit={this.handleSubmit}>Log in</button>
         </div>
       </form>
     );
