@@ -21,7 +21,7 @@ class LoginForm extends React.Component {
     e.preventDefault()
     this.onSubmit()
   }
-  
+
   render() {
     return (
       <form>
