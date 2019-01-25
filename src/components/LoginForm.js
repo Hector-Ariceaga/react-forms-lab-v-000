@@ -1,10 +1,12 @@
 import React from "react";
 
 class LoginForm extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
-    this.state = {};
+    this.state = {
+      onSubmit: this.props.onSubmit
+    };
   }
 
   render() {
